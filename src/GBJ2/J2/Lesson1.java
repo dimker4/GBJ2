@@ -1,4 +1,4 @@
-package GBJ2;
+package GBJ2.J2;
 
 public class Lesson1 {
 }
