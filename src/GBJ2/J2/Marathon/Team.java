@@ -24,16 +24,15 @@ public class Team {
     public void getTeamSuccessfulMembers () {
         System.out.println("Участники, прошедшие всю полосу препятствий: ");
         for (int i = 0; i < teammates.length; i ++) {
-            if (teammates[i].isOnDistance()) teammates[i].info();
+            if (teammates[i].isOnDistance()) teammates[i].info(); // Возвращаем только успешных участников
         }
     }
 
-    public Competitor[] getTeamList() { // Так как массив competitors приватный, то переопределим и вернем новый
+    public Competitor[] getTeamList() { // Метод для работы с приватным свойством класса
         Competitor[] arr = new Competitor[teammates.length];
-        for (int i = 0; i < teammates.length; i ++) {
+        for (int i = 0; i < teammates.length; i ++) { // Так как массив competitors приватный, то переопределим и вернем новый
             arr[i] = teammates[i];
         }
         return arr;
     }
-
 }
