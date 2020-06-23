@@ -6,12 +6,12 @@ public enum DayOfWeek {
     final private int cntHoursWorkingWeek = 40;
     final private int cntHoursWorkingDay = 8;
 
-    public int getHoursToWeekend(int numDay) { // Сюда будем передавать порядковый номер дня
+    public int getHoursToWeekend(DayOfWeek day) { // Сюда будем передавать день
 
-        if (numDay > 5) {
+        if (day.ordinal() > 5) {
             return 0;
         } else {
-            return cntHoursWorkingWeek - numDay * cntHoursWorkingDay;
+            return cntHoursWorkingWeek - day.ordinal()  * cntHoursWorkingDay;
         }
     }
 }
